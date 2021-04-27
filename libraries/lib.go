@@ -52,6 +52,19 @@ func gcd(a, b int) int {
     return gcd(a,b)
 }
 
+// Find factors in squrt(n) TC, 
+func factors(x int) []int {
+    var res []int
+    for i:=1;i*i<=x;i++ {
+        if x%i==0 {
+            f1:=i
+            f2:=x/i
+            res = append(res, f1,f2)
+        }
+    }
+    return res
+}
+
 // convert an array into a string that can be used as key in map in golang.
 func getKey(arr []int) string {
     var b []byte
